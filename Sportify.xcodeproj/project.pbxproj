@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E13860DD2BAC9BC90066012D /* DetailAktivitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860DC2BAC9BC90066012D /* DetailAktivitasView.swift */; };
+		E13860DF2BAD75BE0066012D /* VenueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860DE2BAD75BE0066012D /* VenueDetailView.swift */; };
+		E13860E12BAD77230066012D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860E02BAD77230066012D /* CarouselView.swift */; };
+		E13860E32BAECDBE0066012D /* DetailKomunitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860E22BAECDBE0066012D /* DetailKomunitasView.swift */; };
+		E13860E52BB164A70066012D /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860E42BB164A70066012D /* SegmentedControlView.swift */; };
+		E13860E72BB2D64A0066012D /* ProfilingOlahragaSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860E62BB2D64A0066012D /* ProfilingOlahragaSelection.swift */; };
+		E13860E92BB838190066012D /* DetailAktivitasProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860E82BB838190066012D /* DetailAktivitasProfileView.swift */; };
+		E13860EC2BBAA0690066012D /* KomunitasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860EB2BBAA0690066012D /* KomunitasModel.swift */; };
+		E13860EF2BBCF9E00066012D /* AddNewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860EE2BBCF9E00066012D /* AddNewActivityView.swift */; };
+		E13860F12BBE52760066012D /* AddNewCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860F02BBE52760066012D /* AddNewCommunityView.swift */; };
+		E13860F32BC0F8890066012D /* VenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860F22BC0F8890066012D /* VenueModel.swift */; };
+		E13860F52BC562BE0066012D /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860F42BC562BE0066012D /* ActivityViewModel.swift */; };
+		E13860F72BC562C80066012D /* CommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13860F62BC562C80066012D /* CommunityViewModel.swift */; };
+		E146E1632BE4D0B700812643 /* EditDetailAktivitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1622BE4D0B700812643 /* EditDetailAktivitasView.swift */; };
+		E146E1652BF11A2600812643 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1642BF11A2600812643 /* ErrorHandler.swift */; };
+		E146E1682BF11E6E00812643 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1672BF11E6E00812643 /* ErrorView.swift */; };
+		E146E16A2BF11FE200812643 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1692BF11FE200812643 /* SuccessView.swift */; };
+		E14A32AB2BDBA4690079C361 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AA2BDBA4690079C361 /* MapView.swift */; };
+		E14A32AF2BE004640079C361 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AE2BE004640079C361 /* NotificationManager.swift */; };
+		E19ECFC32BA09CB0004B7E46 /* SportifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFC22BA09CB0004B7E46 /* SportifyApp.swift */; };
+		E19ECFC52BA09CB0004B7E46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFC42BA09CB0004B7E46 /* ContentView.swift */; };
+		E19ECFC72BA09CB2004B7E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19ECFC62BA09CB2004B7E46 /* Assets.xcassets */; };
+		E19ECFCA2BA09CB2004B7E46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19ECFC92BA09CB2004B7E46 /* Preview Assets.xcassets */; };
+		E19ECFD12BA09DEA004B7E46 /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFD02BA09DEA004B7E46 /* SupabaseManager.swift */; };
+		E19ECFD32BA09ED2004B7E46 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFD22BA09ED2004B7E46 /* HomeView.swift */; };
+		E19ECFD52BA09F6C004B7E46 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFD42BA09F6C004B7E46 /* TabBarView.swift */; };
+		E19ECFD72BA0A683004B7E46 /* Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFD62BA0A683004B7E46 /* Extenstion.swift */; };
+		E19ECFD92BA0AF5E004B7E46 /* KategoriAktivitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFD82BA0AF5E004B7E46 /* KategoriAktivitas.swift */; };
+		E19ECFDB2BA0B3ED004B7E46 /* HomeAktivitasFunGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFDA2BA0B3ED004B7E46 /* HomeAktivitasFunGames.swift */; };
+		E19ECFDD2BA0BF5E004B7E46 /* HomeVenueList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFDC2BA0BF5E004B7E46 /* HomeVenueList.swift */; };
+		E19ECFE02BA1586B004B7E46 /* VenueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFDF2BA1586B004B7E46 /* VenueView.swift */; };
+		E19ECFE32BA16ED3004B7E46 /* VenueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFE22BA16ED3004B7E46 /* VenueCard.swift */; };
+		E19ECFE52BA16F10004B7E46 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFE42BA16F10004B7E46 /* FilterButton.swift */; };
+		E19ECFE72BA16FB3004B7E46 /* PilihOlahragaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFE62BA16FB3004B7E46 /* PilihOlahragaButton.swift */; };
+		E19ECFE92BA17714004B7E46 /* KomunitasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFE82BA17714004B7E46 /* KomunitasView.swift */; };
+		E19ECFEB2BA188CC004B7E46 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFEA2BA188CC004B7E46 /* ProfileView.swift */; };
+		E19ECFED2BA18919004B7E46 /* KomunitasCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFEC2BA18919004B7E46 /* KomunitasCard.swift */; };
+		E19ECFEF2BA1A992004B7E46 /* LabelKomunitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFEE2BA1A992004B7E46 /* LabelKomunitas.swift */; };
+		E19ECFF12BA5847F004B7E46 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFF02BA5847E004B7E46 /* HomeViewModel.swift */; };
+		E19ECFF32BA586EA004B7E46 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFF22BA586EA004B7E46 /* VenueViewModel.swift */; };
+		E19ECFF52BA58707004B7E46 /* FunGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFF42BA58707004B7E46 /* FunGamesView.swift */; };
+		E19ECFF72BA5871F004B7E46 /* SparringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFF62BA5871F004B7E46 /* SparringView.swift */; };
+		E19ECFF92BA58737004B7E46 /* CoachingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFF82BA58737004B7E46 /* CoachingView.swift */; };
+		E19ECFFB2BA82FB7004B7E46 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFFA2BA82FB7004B7E46 /* LoginView.swift */; };
+		E19ECFFD2BA832D4004B7E46 /* ReusableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFFC2BA832D4004B7E46 /* ReusableButtons.swift */; };
+		E19ECFFF2BA85080004B7E46 /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFFE2BA85080004B7E46 /* LoginFormView.swift */; };
+		E19ED0012BA855A8004B7E46 /* RegistrasiFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0002BA855A8004B7E46 /* RegistrasiFormView.swift */; };
+		E19ED0032BA88FE1004B7E46 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0022BA88FE1004B7E46 /* LoginViewModel.swift */; };
+		E19ED0062BA94AC9004B7E46 /* RegistrasiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0052BA94AC9004B7E46 /* RegistrasiViewModel.swift */; };
+		E19ED0082BA94B5D004B7E46 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0072BA94B5D004B7E46 /* LocationManager.swift */; };
+		E19ED00B2BA96B6F004B7E46 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED00A2BA96B6F004B7E46 /* Auth */; };
+		E19ED00D2BA96B6F004B7E46 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED00C2BA96B6F004B7E46 /* Functions */; };
+		E19ED00F2BA96B6F004B7E46 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED00E2BA96B6F004B7E46 /* PostgREST */; };
+		E19ED0112BA96B6F004B7E46 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED0102BA96B6F004B7E46 /* Realtime */; };
+		E19ED0132BA96B6F004B7E46 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED0122BA96B6F004B7E46 /* Storage */; };
+		E19ED0162BA97195004B7E46 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E19ED0152BA97195004B7E46 /* Supabase */; };
+		E19ED0182BA97EAD004B7E46 /* RegistrasiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0172BA97EAD004B7E46 /* RegistrasiModel.swift */; };
+		E19ED01A2BA9AECD004B7E46 /* KomunitasProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0192BA9AECD004B7E46 /* KomunitasProfile.swift */; };
+		E19ED01E2BAA95C6004B7E46 /* AktivitasCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED01D2BAA95C6004B7E46 /* AktivitasCard.swift */; };
+		E19ED0202BAAC1C3004B7E46 /* LabelSkillLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED01F2BAAC1C3004B7E46 /* LabelSkillLevel.swift */; };
+		E19ED0222BAAF549004B7E46 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED0212BAAF549004B7E46 /* ActivityModel.swift */; };
+		E1C8E67D2BC6880800A8F1D1 /* JenisOlahragaPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E67C2BC6880800A8F1D1 /* JenisOlahragaPickView.swift */; };
+		E1C8E6802BC6883600A8F1D1 /* JenisAktivitasPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E67F2BC6883600A8F1D1 /* JenisAktivitasPickView.swift */; };
+		E1C8E6822BC6883F00A8F1D1 /* LokasiPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6812BC6883F00A8F1D1 /* LokasiPickView.swift */; };
+		E1C8E6842BC6884700A8F1D1 /* WaktuPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6832BC6884700A8F1D1 /* WaktuPickView.swift */; };
+		E1C8E6862BC6885100A8F1D1 /* PrefKemampuanPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6852BC6885100A8F1D1 /* PrefKemampuanPickView.swift */; };
+		E1C8E6882BC7DAC100A8F1D1 /* SelectOlahragaAktivitas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6872BC7DAC100A8F1D1 /* SelectOlahragaAktivitas.swift */; };
+		E1C8E68A2BC8DBF100A8F1D1 /* BiayaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6892BC8DBF100A8F1D1 /* BiayaView.swift */; };
+		E1C8E68C2BCA49F900A8F1D1 /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E68B2BCA49F900A8F1D1 /* Ext.swift */; };
+		E1C8E6922BCC4FE400A8F1D1 /* MapItemLokasi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6912BCC4FE400A8F1D1 /* MapItemLokasi.swift */; };
+		E1C8E6942BCE76AA00A8F1D1 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6932BCE76AA00A8F1D1 /* PaywallView.swift */; };
+		E1C8E6962BCF95DF00A8F1D1 /* SetSkillLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6952BCF95DF00A8F1D1 /* SetSkillLevelView.swift */; };
+		E1C8E6982BCFA00100A8F1D1 /* ProfilingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6972BCFA00100A8F1D1 /* ProfilingView.swift */; };
+		E1C8E69A2BCFB96400A8F1D1 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6992BCFB96400A8F1D1 /* ButtonViewModel.swift */; };
+		E1C8E69C2BD1042E00A8F1D1 /* testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E69B2BD1042E00A8F1D1 /* testing.swift */; };
+		E1C8E69E2BD61F7800A8F1D1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E69D2BD61F7800A8F1D1 /* LoadingView.swift */; };
+		E1C8E6A02BD6A2D400A8F1D1 /* SplitBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E69F2BD6A2D400A8F1D1 /* SplitBillView.swift */; };
+		E1C8E6A22BD7D9CB00A8F1D1 /* OlahragaSayaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C8E6A12BD7D9CB00A8F1D1 /* OlahragaSayaView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E13860DC2BAC9BC90066012D /* DetailAktivitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAktivitasView.swift; sourceTree = "<group>"; };
+		E13860DE2BAD75BE0066012D /* VenueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailView.swift; sourceTree = "<group>"; };
+		E13860E02BAD77230066012D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		E13860E22BAECDBE0066012D /* DetailKomunitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKomunitasView.swift; sourceTree = "<group>"; };
+		E13860E42BB164A70066012D /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
+		E13860E62BB2D64A0066012D /* ProfilingOlahragaSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilingOlahragaSelection.swift; sourceTree = "<group>"; };
+		E13860E82BB838190066012D /* DetailAktivitasProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAktivitasProfileView.swift; sourceTree = "<group>"; };
+		E13860EB2BBAA0690066012D /* KomunitasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomunitasModel.swift; sourceTree = "<group>"; };
+		E13860ED2BBC09C90066012D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E13860EE2BBCF9E00066012D /* AddNewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivityView.swift; sourceTree = "<group>"; };
+		E13860F02BBE52760066012D /* AddNewCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCommunityView.swift; sourceTree = "<group>"; };
+		E13860F22BC0F8890066012D /* VenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueModel.swift; sourceTree = "<group>"; };
+		E13860F42BC562BE0066012D /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		E13860F62BC562C80066012D /* CommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewModel.swift; sourceTree = "<group>"; };
+		E146E1622BE4D0B700812643 /* EditDetailAktivitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDetailAktivitasView.swift; sourceTree = "<group>"; };
+		E146E1642BF11A2600812643 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		E146E1672BF11E6E00812643 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E146E1692BF11FE200812643 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		E14A32AA2BDBA4690079C361 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E14A32AE2BE004640079C361 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		E19ECFBF2BA09CB0004B7E46 /* Sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19ECFC22BA09CB0004B7E46 /* SportifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportifyApp.swift; sourceTree = "<group>"; };
+		E19ECFC42BA09CB0004B7E46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E19ECFC62BA09CB2004B7E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E19ECFC92BA09CB2004B7E46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E19ECFD02BA09DEA004B7E46 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
+		E19ECFD22BA09ED2004B7E46 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E19ECFD42BA09F6C004B7E46 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E19ECFD62BA0A683004B7E46 /* Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstion.swift; sourceTree = "<group>"; };
+		E19ECFD82BA0AF5E004B7E46 /* KategoriAktivitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriAktivitas.swift; sourceTree = "<group>"; };
+		E19ECFDA2BA0B3ED004B7E46 /* HomeAktivitasFunGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAktivitasFunGames.swift; sourceTree = "<group>"; };
+		E19ECFDC2BA0BF5E004B7E46 /* HomeVenueList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVenueList.swift; sourceTree = "<group>"; };
+		E19ECFDF2BA1586B004B7E46 /* VenueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueView.swift; sourceTree = "<group>"; };
+		E19ECFE22BA16ED3004B7E46 /* VenueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCard.swift; sourceTree = "<group>"; };
+		E19ECFE42BA16F10004B7E46 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		E19ECFE62BA16FB3004B7E46 /* PilihOlahragaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihOlahragaButton.swift; sourceTree = "<group>"; };
+		E19ECFE82BA17714004B7E46 /* KomunitasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomunitasView.swift; sourceTree = "<group>"; };
+		E19ECFEA2BA188CC004B7E46 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E19ECFEC2BA18919004B7E46 /* KomunitasCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomunitasCard.swift; sourceTree = "<group>"; };
+		E19ECFEE2BA1A992004B7E46 /* LabelKomunitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelKomunitas.swift; sourceTree = "<group>"; };
+		E19ECFF02BA5847E004B7E46 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E19ECFF22BA586EA004B7E46 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		E19ECFF42BA58707004B7E46 /* FunGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunGamesView.swift; sourceTree = "<group>"; };
+		E19ECFF62BA5871F004B7E46 /* SparringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparringView.swift; sourceTree = "<group>"; };
+		E19ECFF82BA58737004B7E46 /* CoachingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingView.swift; sourceTree = "<group>"; };
+		E19ECFFA2BA82FB7004B7E46 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E19ECFFC2BA832D4004B7E46 /* ReusableButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButtons.swift; sourceTree = "<group>"; };
+		E19ECFFE2BA85080004B7E46 /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		E19ED0002BA855A8004B7E46 /* RegistrasiFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrasiFormView.swift; sourceTree = "<group>"; };
+		E19ED0022BA88FE1004B7E46 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E19ED0052BA94AC9004B7E46 /* RegistrasiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrasiViewModel.swift; sourceTree = "<group>"; };
+		E19ED0072BA94B5D004B7E46 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E19ED0172BA97EAD004B7E46 /* RegistrasiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrasiModel.swift; sourceTree = "<group>"; };
+		E19ED0192BA9AECD004B7E46 /* KomunitasProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomunitasProfile.swift; sourceTree = "<group>"; };
+		E19ED01D2BAA95C6004B7E46 /* AktivitasCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasCard.swift; sourceTree = "<group>"; };
+		E19ED01F2BAAC1C3004B7E46 /* LabelSkillLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSkillLevel.swift; sourceTree = "<group>"; };
+		E19ED0212BAAF549004B7E46 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		E1C8E67C2BC6880800A8F1D1 /* JenisOlahragaPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenisOlahragaPickView.swift; sourceTree = "<group>"; };
+		E1C8E67F2BC6883600A8F1D1 /* JenisAktivitasPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenisAktivitasPickView.swift; sourceTree = "<group>"; };
+		E1C8E6812BC6883F00A8F1D1 /* LokasiPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokasiPickView.swift; sourceTree = "<group>"; };
+		E1C8E6832BC6884700A8F1D1 /* WaktuPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaktuPickView.swift; sourceTree = "<group>"; };
+		E1C8E6852BC6885100A8F1D1 /* PrefKemampuanPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefKemampuanPickView.swift; sourceTree = "<group>"; };
+		E1C8E6872BC7DAC100A8F1D1 /* SelectOlahragaAktivitas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOlahragaAktivitas.swift; sourceTree = "<group>"; };
+		E1C8E6892BC8DBF100A8F1D1 /* BiayaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiayaView.swift; sourceTree = "<group>"; };
+		E1C8E68B2BCA49F900A8F1D1 /* Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
+		E1C8E6912BCC4FE400A8F1D1 /* MapItemLokasi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemLokasi.swift; sourceTree = "<group>"; };
+		E1C8E6932BCE76AA00A8F1D1 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		E1C8E6952BCF95DF00A8F1D1 /* SetSkillLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSkillLevelView.swift; sourceTree = "<group>"; };
+		E1C8E6972BCFA00100A8F1D1 /* ProfilingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilingView.swift; sourceTree = "<group>"; };
+		E1C8E6992BCFB96400A8F1D1 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		E1C8E69B2BD1042E00A8F1D1 /* testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testing.swift; sourceTree = "<group>"; };
+		E1C8E69D2BD61F7800A8F1D1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E1C8E69F2BD6A2D400A8F1D1 /* SplitBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBillView.swift; sourceTree = "<group>"; };
+		E1C8E6A12BD7D9CB00A8F1D1 /* OlahragaSayaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlahragaSayaView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E19ECFBC2BA09CB0004B7E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19ED00F2BA96B6F004B7E46 /* PostgREST in Frameworks */,
+				E19ED00D2BA96B6F004B7E46 /* Functions in Frameworks */,
+				E19ED0162BA97195004B7E46 /* Supabase in Frameworks */,
+				E19ED00B2BA96B6F004B7E46 /* Auth in Frameworks */,
+				E19ED0132BA96B6F004B7E46 /* Storage in Frameworks */,
+				E19ED0112BA96B6F004B7E46 /* Realtime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E13860EA2BBAA0520066012D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E19ED0172BA97EAD004B7E46 /* RegistrasiModel.swift */,
+				E19ED0212BAAF549004B7E46 /* ActivityModel.swift */,
+				E13860EB2BBAA0690066012D /* KomunitasModel.swift */,
+				E13860F22BC0F8890066012D /* VenueModel.swift */,
+				E146E1642BF11A2600812643 /* ErrorHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E19ECFB62BA09CB0004B7E46 = {
+			isa = PBXGroup;
+			children = (
+				E19ECFC12BA09CB0004B7E46 /* Sportify */,
+				E19ECFC02BA09CB0004B7E46 /* Products */,
+				E19ED0142BA97195004B7E46 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E19ECFC02BA09CB0004B7E46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E19ECFBF2BA09CB0004B7E46 /* Sportify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E19ECFC12BA09CB0004B7E46 /* Sportify */ = {
+			isa = PBXGroup;
+			children = (
+				E13860ED2BBC09C90066012D /* Info.plist */,
+				E13860EA2BBAA0520066012D /* Models */,
+				E19ED0042BA8A5E8004B7E46 /* View Model */,
+				E19ECFE12BA16AEE004B7E46 /* Views */,
+				E19ECFDE2BA0C435004B7E46 /* Component */,
+				E19ECFC22BA09CB0004B7E46 /* SportifyApp.swift */,
+				E19ECFC42BA09CB0004B7E46 /* ContentView.swift */,
+				E19ECFC62BA09CB2004B7E46 /* Assets.xcassets */,
+				E19ECFC82BA09CB2004B7E46 /* Preview Content */,
+				E1C8E68B2BCA49F900A8F1D1 /* Ext.swift */,
+				E1C8E69B2BD1042E00A8F1D1 /* testing.swift */,
+			);
+			path = Sportify;
+			sourceTree = "<group>";
+		};
+		E19ECFC82BA09CB2004B7E46 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E19ECFC92BA09CB2004B7E46 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E19ECFDE2BA0C435004B7E46 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E19ECFD82BA0AF5E004B7E46 /* KategoriAktivitas.swift */,
+				E19ECFDA2BA0B3ED004B7E46 /* HomeAktivitasFunGames.swift */,
+				E19ECFDC2BA0BF5E004B7E46 /* HomeVenueList.swift */,
+				E19ECFE22BA16ED3004B7E46 /* VenueCard.swift */,
+				E19ECFE42BA16F10004B7E46 /* FilterButton.swift */,
+				E19ECFE62BA16FB3004B7E46 /* PilihOlahragaButton.swift */,
+				E19ECFEC2BA18919004B7E46 /* KomunitasCard.swift */,
+				E19ECFEE2BA1A992004B7E46 /* LabelKomunitas.swift */,
+				E19ECFFC2BA832D4004B7E46 /* ReusableButtons.swift */,
+				E19ED0192BA9AECD004B7E46 /* KomunitasProfile.swift */,
+				E19ED01D2BAA95C6004B7E46 /* AktivitasCard.swift */,
+				E19ED01F2BAAC1C3004B7E46 /* LabelSkillLevel.swift */,
+				E13860E02BAD77230066012D /* CarouselView.swift */,
+				E13860E42BB164A70066012D /* SegmentedControlView.swift */,
+				E13860E62BB2D64A0066012D /* ProfilingOlahragaSelection.swift */,
+				E1C8E6872BC7DAC100A8F1D1 /* SelectOlahragaAktivitas.swift */,
+				E1C8E6912BCC4FE400A8F1D1 /* MapItemLokasi.swift */,
+				E1C8E69D2BD61F7800A8F1D1 /* LoadingView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E19ECFE12BA16AEE004B7E46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E19ECFD42BA09F6C004B7E46 /* TabBarView.swift */,
+				E19ECFD22BA09ED2004B7E46 /* HomeView.swift */,
+				E19ECFDF2BA1586B004B7E46 /* VenueView.swift */,
+				E19ECFE82BA17714004B7E46 /* KomunitasView.swift */,
+				E19ECFEA2BA188CC004B7E46 /* ProfileView.swift */,
+				E19ECFF42BA58707004B7E46 /* FunGamesView.swift */,
+				E19ECFF62BA5871F004B7E46 /* SparringView.swift */,
+				E19ECFF82BA58737004B7E46 /* CoachingView.swift */,
+				E19ECFFA2BA82FB7004B7E46 /* LoginView.swift */,
+				E19ECFFE2BA85080004B7E46 /* LoginFormView.swift */,
+				E19ED0002BA855A8004B7E46 /* RegistrasiFormView.swift */,
+				E13860DC2BAC9BC90066012D /* DetailAktivitasView.swift */,
+				E13860DE2BAD75BE0066012D /* VenueDetailView.swift */,
+				E13860E22BAECDBE0066012D /* DetailKomunitasView.swift */,
+				E13860E82BB838190066012D /* DetailAktivitasProfileView.swift */,
+				E13860EE2BBCF9E00066012D /* AddNewActivityView.swift */,
+				E13860F02BBE52760066012D /* AddNewCommunityView.swift */,
+				E1C8E67E2BC6880E00A8F1D1 /* Add Activity Forms */,
+				E1C8E6932BCE76AA00A8F1D1 /* PaywallView.swift */,
+				E1C8E6952BCF95DF00A8F1D1 /* SetSkillLevelView.swift */,
+				E1C8E6972BCFA00100A8F1D1 /* ProfilingView.swift */,
+				E1C8E69F2BD6A2D400A8F1D1 /* SplitBillView.swift */,
+				E1C8E6A12BD7D9CB00A8F1D1 /* OlahragaSayaView.swift */,
+				E14A32AA2BDBA4690079C361 /* MapView.swift */,
+				E146E1622BE4D0B700812643 /* EditDetailAktivitasView.swift */,
+				E146E1672BF11E6E00812643 /* ErrorView.swift */,
+				E146E1692BF11FE200812643 /* SuccessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E19ED0042BA8A5E8004B7E46 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				E19ECFD02BA09DEA004B7E46 /* SupabaseManager.swift */,
+				E19ECFD62BA0A683004B7E46 /* Extenstion.swift */,
+				E19ECFF02BA5847E004B7E46 /* HomeViewModel.swift */,
+				E19ECFF22BA586EA004B7E46 /* VenueViewModel.swift */,
+				E19ED0022BA88FE1004B7E46 /* LoginViewModel.swift */,
+				E19ED0052BA94AC9004B7E46 /* RegistrasiViewModel.swift */,
+				E19ED0072BA94B5D004B7E46 /* LocationManager.swift */,
+				E13860F42BC562BE0066012D /* ActivityViewModel.swift */,
+				E13860F62BC562C80066012D /* CommunityViewModel.swift */,
+				E1C8E6992BCFB96400A8F1D1 /* ButtonViewModel.swift */,
+				E14A32AE2BE004640079C361 /* NotificationManager.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		E19ED0142BA97195004B7E46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1C8E67E2BC6880E00A8F1D1 /* Add Activity Forms */ = {
+			isa = PBXGroup;
+			children = (
+				E1C8E67C2BC6880800A8F1D1 /* JenisOlahragaPickView.swift */,
+				E1C8E67F2BC6883600A8F1D1 /* JenisAktivitasPickView.swift */,
+				E1C8E6812BC6883F00A8F1D1 /* LokasiPickView.swift */,
+				E1C8E6832BC6884700A8F1D1 /* WaktuPickView.swift */,
+				E1C8E6852BC6885100A8F1D1 /* PrefKemampuanPickView.swift */,
+				E1C8E6892BC8DBF100A8F1D1 /* BiayaView.swift */,
+			);
+			path = "Add Activity Forms";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E19ECFBE2BA09CB0004B7E46 /* Sportify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E19ECFCD2BA09CB2004B7E46 /* Build configuration list for PBXNativeTarget "Sportify" */;
+			buildPhases = (
+				E19ECFBB2BA09CB0004B7E46 /* Sources */,
+				E19ECFBC2BA09CB0004B7E46 /* Frameworks */,
+				E19ECFBD2BA09CB0004B7E46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sportify;
+			packageProductDependencies = (
+				E19ED00A2BA96B6F004B7E46 /* Auth */,
+				E19ED00C2BA96B6F004B7E46 /* Functions */,
+				E19ED00E2BA96B6F004B7E46 /* PostgREST */,
+				E19ED0102BA96B6F004B7E46 /* Realtime */,
+				E19ED0122BA96B6F004B7E46 /* Storage */,
+				E19ED0152BA97195004B7E46 /* Supabase */,
+			);
+			productName = Sportify;
+			productReference = E19ECFBF2BA09CB0004B7E46 /* Sportify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E19ECFB72BA09CB0004B7E46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					E19ECFBE2BA09CB0004B7E46 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = E19ECFBA2BA09CB0004B7E46 /* Build configuration list for PBXProject "Sportify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E19ECFB62BA09CB0004B7E46;
+			packageReferences = (
+				E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			productRefGroup = E19ECFC02BA09CB0004B7E46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E19ECFBE2BA09CB0004B7E46 /* Sportify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E19ECFBD2BA09CB0004B7E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19ECFCA2BA09CB2004B7E46 /* Preview Assets.xcassets in Resources */,
+				E19ECFC72BA09CB2004B7E46 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E19ECFBB2BA09CB0004B7E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19ECFD72BA0A683004B7E46 /* Extenstion.swift in Sources */,
+				E19ECFF32BA586EA004B7E46 /* VenueViewModel.swift in Sources */,
+				E13860E92BB838190066012D /* DetailAktivitasProfileView.swift in Sources */,
+				E19ED01E2BAA95C6004B7E46 /* AktivitasCard.swift in Sources */,
+				E13860E72BB2D64A0066012D /* ProfilingOlahragaSelection.swift in Sources */,
+				E1C8E69C2BD1042E00A8F1D1 /* testing.swift in Sources */,
+				E1C8E6862BC6885100A8F1D1 /* PrefKemampuanPickView.swift in Sources */,
+				E19ECFF12BA5847F004B7E46 /* HomeViewModel.swift in Sources */,
+				E13860EC2BBAA0690066012D /* KomunitasModel.swift in Sources */,
+				E1C8E6822BC6883F00A8F1D1 /* LokasiPickView.swift in Sources */,
+				E1C8E6882BC7DAC100A8F1D1 /* SelectOlahragaAktivitas.swift in Sources */,
+				E19ECFEF2BA1A992004B7E46 /* LabelKomunitas.swift in Sources */,
+				E1C8E6802BC6883600A8F1D1 /* JenisAktivitasPickView.swift in Sources */,
+				E13860E52BB164A70066012D /* SegmentedControlView.swift in Sources */,
+				E1C8E68C2BCA49F900A8F1D1 /* Ext.swift in Sources */,
+				E1C8E6922BCC4FE400A8F1D1 /* MapItemLokasi.swift in Sources */,
+				E19ED0222BAAF549004B7E46 /* ActivityModel.swift in Sources */,
+				E14A32AB2BDBA4690079C361 /* MapView.swift in Sources */,
+				E19ED01A2BA9AECD004B7E46 /* KomunitasProfile.swift in Sources */,
+				E1C8E68A2BC8DBF100A8F1D1 /* BiayaView.swift in Sources */,
+				E19ECFFB2BA82FB7004B7E46 /* LoginView.swift in Sources */,
+				E19ED0062BA94AC9004B7E46 /* RegistrasiViewModel.swift in Sources */,
+				E19ED0082BA94B5D004B7E46 /* LocationManager.swift in Sources */,
+				E19ECFD12BA09DEA004B7E46 /* SupabaseManager.swift in Sources */,
+				E19ECFD32BA09ED2004B7E46 /* HomeView.swift in Sources */,
+				E1C8E6942BCE76AA00A8F1D1 /* PaywallView.swift in Sources */,
+				E13860F12BBE52760066012D /* AddNewCommunityView.swift in Sources */,
+				E19ECFED2BA18919004B7E46 /* KomunitasCard.swift in Sources */,
+				E19ED0032BA88FE1004B7E46 /* LoginViewModel.swift in Sources */,
+				E13860EF2BBCF9E00066012D /* AddNewActivityView.swift in Sources */,
+				E1C8E69E2BD61F7800A8F1D1 /* LoadingView.swift in Sources */,
+				E146E1682BF11E6E00812643 /* ErrorView.swift in Sources */,
+				E19ECFC52BA09CB0004B7E46 /* ContentView.swift in Sources */,
+				E13860DF2BAD75BE0066012D /* VenueDetailView.swift in Sources */,
+				E1C8E6842BC6884700A8F1D1 /* WaktuPickView.swift in Sources */,
+				E19ECFE32BA16ED3004B7E46 /* VenueCard.swift in Sources */,
+				E19ECFD52BA09F6C004B7E46 /* TabBarView.swift in Sources */,
+				E19ECFF52BA58707004B7E46 /* FunGamesView.swift in Sources */,
+				E13860E32BAECDBE0066012D /* DetailKomunitasView.swift in Sources */,
+				E19ECFE92BA17714004B7E46 /* KomunitasView.swift in Sources */,
+				E1C8E69A2BCFB96400A8F1D1 /* ButtonViewModel.swift in Sources */,
+				E19ECFEB2BA188CC004B7E46 /* ProfileView.swift in Sources */,
+				E19ECFE72BA16FB3004B7E46 /* PilihOlahragaButton.swift in Sources */,
+				E19ED0012BA855A8004B7E46 /* RegistrasiFormView.swift in Sources */,
+				E13860F32BC0F8890066012D /* VenueModel.swift in Sources */,
+				E19ECFDB2BA0B3ED004B7E46 /* HomeAktivitasFunGames.swift in Sources */,
+				E1C8E6982BCFA00100A8F1D1 /* ProfilingView.swift in Sources */,
+				E146E1632BE4D0B700812643 /* EditDetailAktivitasView.swift in Sources */,
+				E19ED0182BA97EAD004B7E46 /* RegistrasiModel.swift in Sources */,
+				E1C8E6A02BD6A2D400A8F1D1 /* SplitBillView.swift in Sources */,
+				E14A32AF2BE004640079C361 /* NotificationManager.swift in Sources */,
+				E1C8E67D2BC6880800A8F1D1 /* JenisOlahragaPickView.swift in Sources */,
+				E13860F52BC562BE0066012D /* ActivityViewModel.swift in Sources */,
+				E19ECFE52BA16F10004B7E46 /* FilterButton.swift in Sources */,
+				E13860F72BC562C80066012D /* CommunityViewModel.swift in Sources */,
+				E19ECFF92BA58737004B7E46 /* CoachingView.swift in Sources */,
+				E19ECFFD2BA832D4004B7E46 /* ReusableButtons.swift in Sources */,
+				E19ECFE02BA1586B004B7E46 /* VenueView.swift in Sources */,
+				E146E1652BF11A2600812643 /* ErrorHandler.swift in Sources */,
+				E19ECFC32BA09CB0004B7E46 /* SportifyApp.swift in Sources */,
+				E19ED0202BAAC1C3004B7E46 /* LabelSkillLevel.swift in Sources */,
+				E13860E12BAD77230066012D /* CarouselView.swift in Sources */,
+				E146E16A2BF11FE200812643 /* SuccessView.swift in Sources */,
+				E1C8E6A22BD7D9CB00A8F1D1 /* OlahragaSayaView.swift in Sources */,
+				E19ECFD92BA0AF5E004B7E46 /* KategoriAktivitas.swift in Sources */,
+				E19ECFFF2BA85080004B7E46 /* LoginFormView.swift in Sources */,
+				E19ECFDD2BA0BF5E004B7E46 /* HomeVenueList.swift in Sources */,
+				E13860DD2BAC9BC90066012D /* DetailAktivitasView.swift in Sources */,
+				E19ECFF72BA5871F004B7E46 /* SparringView.swift in Sources */,
+				E1C8E6962BCF95DF00A8F1D1 /* SetSkillLevelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E19ECFCB2BA09CB2004B7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E19ECFCC2BA09CB2004B7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E19ECFCE2BA09CB2004B7E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sportify/Preview Content\"";
+				DEVELOPMENT_TEAM = BVKAMN7JUV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sportify/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GatherIn;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Sportify needs to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sportify needs to access your location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.febrian.Sportify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E19ECFCF2BA09CB2004B7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sportify/Preview Content\"";
+				DEVELOPMENT_TEAM = BVKAMN7JUV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sportify/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GatherIn;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Sportify needs to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Sportify needs to access your location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.febrian.Sportify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E19ECFBA2BA09CB0004B7E46 /* Build configuration list for PBXProject "Sportify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19ECFCB2BA09CB2004B7E46 /* Debug */,
+				E19ECFCC2BA09CB2004B7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E19ECFCD2BA09CB2004B7E46 /* Build configuration list for PBXNativeTarget "Sportify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19ECFCE2BA09CB2004B7E46 /* Debug */,
+				E19ECFCF2BA09CB2004B7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E19ED00A2BA96B6F004B7E46 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		E19ED00C2BA96B6F004B7E46 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		E19ED00E2BA96B6F004B7E46 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		E19ED0102BA96B6F004B7E46 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		E19ED0122BA96B6F004B7E46 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		E19ED0152BA97195004B7E46 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19ED0092BA96B6F004B7E46 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E19ECFB72BA09CB0004B7E46 /* Project object */;
+}
