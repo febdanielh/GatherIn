@@ -15,7 +15,8 @@ struct AddNewActivityView: View {
     @State private var whichSheet = 0
     
     @State private var isLoading = false
-    @State private var showAlert = false
+    @State private var showSuccessAlert = false
+    @State private var showFailAlert = false
     let jenisAktivitas: String
     
     var body: some View {
@@ -190,12 +191,10 @@ struct AddNewActivityView: View {
                                     biaya: avm.biaya) { (result, error) in
                                         isLoading = true
                                         if let result {
-                                            DispatchQueue.main.async {
-                                                hvm.path.removeAll()
-                                            }
+                                            showSuccessAlert = true
                                             print(result)
                                         } else {
-                                            //TODO: alert error
+                                            showFailAlert = true
                                             print(error ?? "eror bang")
                                         }
                                     }
@@ -213,6 +212,12 @@ struct AddNewActivityView: View {
                     LoadingView()
                 }
             }
+        }
+        .alert("Berhasil", isPresented: $showSuccessAlert) {
+            SuccessView()
+        }
+        .alert("Terjadi Kesalahan", isPresented: $showFailAlert) {
+            ErrorView()
         }
         .sheet(isPresented: $showSheet, content: {
             SheetNumbers(whichSheet: $whichSheet)

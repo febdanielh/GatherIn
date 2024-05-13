@@ -16,6 +16,7 @@ class HomeViewModel: ObservableObject {
     @Published var skillLevels: [String : String] = [:]
     @Published var olahraganyaUser: [OlahragaPayload] = []
     @Published var path = [Int]()
+    @Published var homeError: ErrorType? = nil
     
     func getAppUser() {
         Task {
@@ -29,6 +30,7 @@ class HomeViewModel: ObservableObject {
                 print(user ?? UserPayLoad(userID: UUID(), email: "", namaLengkap: "", noTelp: "", tanggalLahir: Date(), jenisKelamin: ""))
                 
             } catch {
+                homeError = ErrorType.server
                 print(error)
             }
         }
@@ -86,7 +88,7 @@ class HomeViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.olahraganyaUser = user ?? []
                 }
-                print(user ?? OlahragaPayload(id: 0, namaOlahraga: "", gambar: "", skillLevel: "", userID: userID))
+//                print(user ?? OlahragaPayload(id: 0, namaOlahraga: "", gambar: "", skillLevel: "", userID: userID))
                 print(olahraganyaUser)
             } catch {
                 print(error)

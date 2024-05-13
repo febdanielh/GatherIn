@@ -26,6 +26,7 @@ class ActivityViewModel: ObservableObject {
     @Published var hostedActivities: [ActivityReadPayLoad] = []
     @Published var joinedActivities: [ActivityReadPayLoad] = []
     @Published var userInActivity: [DetailActivityPayLoad] = []
+    @Published var activityError: ErrorType? = nil
     
     func createNewActivity(nama: String, deskripsi: String, jenisOlahraga: String, jenisAktivitas: String, waktu: Date, lokasi: String, kemampuan: String, jumlahPeserta: Int, biaya: Int, completion: @escaping (String?, Error?) -> Void) async throws {
         let userID = try await SupabaseManager.instance.client.auth.session.user.id

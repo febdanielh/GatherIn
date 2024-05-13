@@ -12,6 +12,8 @@ struct AddNewCommunityView: View {
     @EnvironmentObject var lvm: LoginViewModel
     @State private var showSheet = false
     @State private var whichSheet = 0
+    @State private var showSuccessAlert = false
+    @State private var showFailAlert = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -104,12 +106,14 @@ struct AddNewCommunityView: View {
                                 foto: "") { result, error in
                                     if let result {
                                         cvm.getUserCommunity()
-                                        DispatchQueue.main.async {
-                                            lvm.currentDisplayScreen = .home
-                                        }
+//                                        DispatchQueue.main.async {
+//                                            lvm.currentDisplayScreen = .home
+//                                        }
+                                        showSuccessAlert = true
                                         print(result)
                                     } else {
-                                        //handle error brodiw
+                                        showFailAlert = true
+                                        print(error ?? "error bang")
                                     }
                                 }
                         }
@@ -126,6 +130,12 @@ struct AddNewCommunityView: View {
         .sheet(isPresented: $showSheet, content: {
             SheetNumbersComm(whichSheet: $whichSheet)
         })
+        .alert("Berhasil", isPresented: $showSuccessAlert) {
+            SuccessView()
+        }
+        .alert("Terjadi Kesalahan", isPresented: $showFailAlert) {
+            ErrorView()
+        }
     }
 }
 

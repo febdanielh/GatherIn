@@ -15,9 +15,7 @@ struct SuccessView: View {
                 
                 VStack {
                     Button("Home") {
-                        Task {
-                            
-                        }
+                        
                     }
                     .buttonStyle(.borderedProminent)
                 }

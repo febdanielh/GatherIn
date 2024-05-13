@@ -42,6 +42,16 @@ struct GreenRealButton: ButtonStyle {
     }
 }
 
+struct RedButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 361, height: 50)
+            .font(.title3).fontWeight(.medium)
+            .foregroundColor(.white)
+            .background(.darkerRed)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+}
 struct DisabledButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

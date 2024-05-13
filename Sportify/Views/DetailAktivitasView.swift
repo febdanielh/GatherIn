@@ -195,6 +195,14 @@ struct DetailHostedAktivitasView: View {
                             .navigationTitle(aktivitas.namaAktivitas)
                         }
                         .padding()
+                        
+                        Button("Selesaikan Aktivitas"){
+                            
+                        }.buttonStyle(GreenRealButton())
+                        
+                        Button("Batalkan Aktivitas"){
+                            
+                        }.buttonStyle(RedButton())
                     }
                 }
             }
@@ -210,9 +218,12 @@ struct DetailHostedAktivitasView: View {
                 .background(.darkerGreen)
             }
             .toolbar(content: {
-                Image(systemName: "square.and.pencil").foregroundStyle(.white).fontWeight(.medium)
+                NavigationLink(destination: Text("Coming Soon")) {
+                    Image(systemName: "square.and.pencil").foregroundStyle(.white).fontWeight(.medium)
+                }
             })
         }
+        .tint(.white)
         .onAppear {
             UINavigationBarAppearance()
                 .setColor(title: .white, background: .darkerGreen)

@@ -9,11 +9,6 @@ import Supabase
 import Foundation
 import SwiftUI
 
-enum SupaExt {
-    static var url = URL(string: "https://xoptazxpthtlvzpexdtx.supabase.co")!
-    static var key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhvcHRhenhwdGh0bHZ6cGV4ZHR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk4NzY2NTcsImV4cCI6MjAyNTQ1MjY1N30.7cy7lbf5Dk88snmnjA3c5MlynkeYhmWq95_quzcEq8U"
-}
-
 class SupabaseManager {
     static let instance = SupabaseManager()
     
