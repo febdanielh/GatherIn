@@ -216,6 +216,7 @@
 		E19ECFB62BA09CB0004B7E46 = {
 			isa = PBXGroup;
 			children = (
+				E146E16E2BF2135C00812643 /* ci_scripts */,
 				E19ECFC12BA09CB0004B7E46 /* Sportify */,
 				E19ECFC02BA09CB0004B7E46 /* Products */,
 				E19ED0142BA97195004B7E46 /* Frameworks */,
@@ -233,7 +234,6 @@
 		E19ECFC12BA09CB0004B7E46 /* Sportify */ = {
 			isa = PBXGroup;
 			children = (
-				E146E16E2BF2135C00812643 /* ci_scripts */,
 				E146E16B2BF210A700812643 /* Constant */,
 				E13860ED2BBC09C90066012D /* Info.plist */,
 				E13860EA2BBAA0520066012D /* Models */,

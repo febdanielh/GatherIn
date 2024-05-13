@@ -15,7 +15,7 @@ enum SupaExt {
 }"
 
 # Write a JSON File containing all the environment variables and secrets.
-echo "${SECRET_CONTENT}" > ../Constant/SupaExt.swift
+echo "${SECRET_CONTENT}" > ../Sportify/Constant/SupaExt.swift
 
 echo "Wrote Secrets.plist file."
 
