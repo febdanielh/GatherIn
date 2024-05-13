@@ -25,6 +25,7 @@
 		E146E1682BF11E6E00812643 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1672BF11E6E00812643 /* ErrorView.swift */; };
 		E146E16A2BF11FE200812643 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1692BF11FE200812643 /* SuccessView.swift */; };
 		E146E16D2BF210BD00812643 /* SupaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E16C2BF210BD00812643 /* SupaExt.swift */; };
+		E146E1702BF213A500812643 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = E146E16F2BF213A500812643 /* ci_pre_xcodebuild.sh */; };
 		E14A32AB2BDBA4690079C361 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AA2BDBA4690079C361 /* MapView.swift */; };
 		E14A32AF2BE004640079C361 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AE2BE004640079C361 /* NotificationManager.swift */; };
 		E19ECFC32BA09CB0004B7E46 /* SportifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFC22BA09CB0004B7E46 /* SportifyApp.swift */; };
@@ -108,6 +109,7 @@
 		E146E1672BF11E6E00812643 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		E146E1692BF11FE200812643 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		E146E16C2BF210BD00812643 /* SupaExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupaExt.swift; sourceTree = "<group>"; };
+		E146E16F2BF213A500812643 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
 		E14A32AA2BDBA4690079C361 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E14A32AE2BE004640079C361 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E19ECFBF2BA09CB0004B7E46 /* Sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,14 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		E146E16E2BF2135C00812643 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E146E16F2BF213A500812643 /* ci_pre_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		E19ECFB62BA09CB0004B7E46 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		E19ECFC12BA09CB0004B7E46 /* Sportify */ = {
 			isa = PBXGroup;
 			children = (
+				E146E16E2BF2135C00812643 /* ci_scripts */,
 				E146E16B2BF210A700812643 /* Constant */,
 				E13860ED2BBC09C90066012D /* Info.plist */,
 				E13860EA2BBAA0520066012D /* Models */,
@@ -414,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19ECFCA2BA09CB2004B7E46 /* Preview Assets.xcassets in Resources */,
+				E146E1702BF213A500812643 /* ci_pre_xcodebuild.sh in Resources */,
 				E19ECFC72BA09CB2004B7E46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
