@@ -18,7 +18,7 @@ EOF
 )
 
 # Write a Swift file containing the secret content.
-echo "$SECRET_CONTENT" > ../Sportify/Constant/SupaExt.swift
+echo "$SECRET_CONTENT" > ../Sportify/SupaExt.swift
 
 echo "Wrote SupaExt.swift file."
 
