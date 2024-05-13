@@ -7,12 +7,14 @@ echo "Stage: PRE-Xcode Build is activated .... "
 cd $CI_PRIMARY_REPOSITORY_PATH/ci_scripts || exit 1
 
 # Create the plist content
-SECRET_CONTENT= "import Foundation
+SECRET_CONTENT= "
+import Foundation
 
 enum SupaExt {
     static var url = URL(string: \"$SUPABASE_URL\")!
     static var key = \"$SUPABASE_API_KEY\"
-}"
+}
+"
 
 # Write a JSON File containing all the environment variables and secrets.
 echo "${SECRET_CONTENT}" > ../Sportify/Constant/SupaExt.swift
