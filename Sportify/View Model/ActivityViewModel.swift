@@ -148,4 +148,16 @@ class ActivityViewModel: ObservableObject {
             }
         }
     }
+    
+    func updateActivity(id: UUID, status: String, completion: @escaping (String?, Error?) -> Void) {
+        Task {
+            do {
+                try await SupabaseManager.instance.client.database.from("Activity").update(["status" : status]).eq("aktivitasID", value: id).execute()
+                completion("Success", nil)
+            } catch {
+                print(error)
+                completion(nil, error)
+            }
+        }
+    }
 }

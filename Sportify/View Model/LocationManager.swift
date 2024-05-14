@@ -135,7 +135,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 }
                 
                 let nearestMapItems = Array(sortedMapItems)
-                print(nearestMapItems)
                 requestedPlaces = nearestMapItems.first ?? MKMapItem()
                 completion(requestedPlaces, nil)
                 

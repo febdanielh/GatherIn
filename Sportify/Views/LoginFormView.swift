@@ -16,10 +16,10 @@ struct LoginFormView: View {
             ZStack {
                 Color.darkerGreen.ignoresSafeArea()
                 VStack {
-                    Rectangle().frame(width: 100, height: 100).foregroundStyle(.white)
-                    Text("Sportify").foregroundStyle(.white).font(.largeTitle).bold()
+                    Image("logo").resizable().frame(width: 180, height: 180).foregroundStyle(.white)
+                    Text("GatherIn").foregroundStyle(.white).fontDesign(.serif).font(.largeTitle).bold()
                     
-                    Spacer().frame(height: 90)
+                    Spacer().frame(height: 50)
                     
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Email").foregroundStyle(.white).fontWeight(.semibold)
@@ -42,6 +42,7 @@ struct LoginFormView: View {
                         vm.signIn(email: vm.email, password: vm.password, completion: { result, error in
                         isLoading = true
                             if let result {
+                                isLoading = false
                                 hvm.getAppUser()
                                 hvm.getOlahragaUser()
                                 DispatchQueue.main.async {
@@ -50,6 +51,11 @@ struct LoginFormView: View {
                                 print(result)
                             } else {
                                 //TODO: jeuuuuu alert error
+                                isLoading = false
+                                DispatchQueue.main.async {
+                                    vm.loginError = .server
+                                    vm.showAlert = true
+                                }
                             }
                         })
                     }.buttonStyle(WhiteButton()).shadow(radius: 5)
@@ -59,6 +65,11 @@ struct LoginFormView: View {
                     LoadingView()
                 }
             }
+        }
+        .alert("Terjadi Kesalahan", isPresented: $vm.showAlert) {
+            ErrorView()
+        } message: {
+            Text(vm.loginError?.description ?? "error")
         }
     }
 }

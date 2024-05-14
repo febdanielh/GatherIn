@@ -14,6 +14,7 @@ struct AddNewCommunityView: View {
     @State private var whichSheet = 0
     @State private var showSuccessAlert = false
     @State private var showFailAlert = false
+    @State private var showAlert = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -85,7 +86,7 @@ struct AddNewCommunityView: View {
                             .shadow(radius: 4)
                         
                         Button(action: {
-                            print("tapped")
+                            showAlert = true
                         }, label: {
                             VStack(spacing: 20) {
                                 Image(systemName: "plus")
@@ -106,9 +107,6 @@ struct AddNewCommunityView: View {
                                 foto: "") { result, error in
                                     if let result {
                                         cvm.getUserCommunity()
-//                                        DispatchQueue.main.async {
-//                                            lvm.currentDisplayScreen = .home
-//                                        }
                                         showSuccessAlert = true
                                         print(result)
                                     } else {
@@ -132,8 +130,15 @@ struct AddNewCommunityView: View {
         })
         .alert("Berhasil", isPresented: $showSuccessAlert) {
             SuccessView()
+        } message: {
+            Text("Komunitas berhasil dibuat!")
         }
         .alert("Terjadi Kesalahan", isPresented: $showFailAlert) {
+            ErrorView()
+        } message: {
+            Text("Terjadi kesalahan dalam membuat komunitas!. \n Coba lagi")
+        }
+        .alert("Coming Soon", isPresented: $showAlert) {
             ErrorView()
         }
     }

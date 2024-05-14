@@ -197,12 +197,24 @@ struct DetailHostedAktivitasView: View {
                         .padding()
                         
                         Button("Selesaikan Aktivitas"){
-                            
-                        }.buttonStyle(GreenRealButton())
+                            avm.updateActivity(id: aktivitas.aktivitasID, status: "Selesai") { result, error in
+                                if let result {
+                                    print(result)
+                                } else {
+                                    
+                                }
+                            }
+                        }.buttonStyle(GreenRealButton()).shadow(radius: 4)
                         
                         Button("Batalkan Aktivitas"){
-                            
-                        }.buttonStyle(RedButton())
+                            avm.updateActivity(id: aktivitas.aktivitasID, status: "Batal") { result, error in
+                                if let result {
+                                    print(result)
+                                } else {
+                                    
+                                }
+                            }
+                        }.buttonStyle(ReverseRedButton())
                     }
                 }
             }

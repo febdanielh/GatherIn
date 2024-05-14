@@ -152,11 +152,16 @@ struct AddNewActivityView: View {
                                 .fill(.white)
                                 .shadow(radius: 4)
                             VStack(spacing: 16) {
-                                HStack {
-                                    Text("Komunitas")
-                                    Spacer()
-                                    Image(systemName: "chevron.right").foregroundStyle(.darkerGreen)
-                                }.fontWeight(.medium)
+                                Button {
+                                    showSheet = true
+                                    whichSheet = 2
+                                } label: {
+                                    HStack {
+                                        Text("Komunitas").foregroundStyle(.black)
+                                        Spacer()
+                                        Image(systemName: "chevron.right").foregroundStyle(.darkerGreen)
+                                    }.fontWeight(.medium)
+                                }
                                 
                                 Divider()
                                 
@@ -191,6 +196,7 @@ struct AddNewActivityView: View {
                                     biaya: avm.biaya) { (result, error) in
                                         isLoading = true
                                         if let result {
+                                            isLoading = false
                                             showSuccessAlert = true
                                             print(result)
                                         } else {

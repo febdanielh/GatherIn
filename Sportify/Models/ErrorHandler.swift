@@ -15,11 +15,11 @@ enum ErrorType: Error {
     var description: String {
         switch self {
         case .incomplete:
-            return "Sorry, we couldn't retrieve users. \n Try again later."
+            return "Email dan password perlu diisi. \n Coba lagi."
         case .disconnect:
-            return "Sorry, we couldn't retrieve users. \n Try again later."
+            return "Maaf, koneksi terputus. Silahkan periksa koneksi Anda dan coba lagi."
         case .server:
-            return "Sorry, we couldn't retrieve users. \n Try again later."
+            return "Email atau password salah. \n Coba lagi."
         }
     }
 }

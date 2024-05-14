@@ -52,6 +52,22 @@ struct RedButton: ButtonStyle {
             .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 }
+
+struct ReverseRedButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 361, height: 50)
+            .font(.title3).fontWeight(.medium)
+            .foregroundColor(.darkerRed)
+//            .background(.darkerRed)
+            .overlay {
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.darkerRed, lineWidth: 1.5)
+                    .shadow(radius: 4)
+            }
+    }
+}
+
 struct DisabledButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

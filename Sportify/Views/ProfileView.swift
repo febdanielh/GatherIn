@@ -68,15 +68,15 @@ struct ProfileView: View {
             .toolbar(content: {
                 Image(systemName: "square.and.pencil").foregroundColor(.white).fontWeight(.medium)
             })
+            .onAppear {
+                UINavigationBarAppearance()
+                    .setColor(title: .white, background: .darkerGreen)
+                
+                avm.getJoinedActivities()
+                kvm.getUserCommunity()
+            }
         }
         .tint(.white)
-        .onAppear {
-            UINavigationBarAppearance()
-                .setColor(title: .white, background: .darkerGreen)
-            
-            avm.getJoinedActivities()
-            kvm.getUserCommunity()
-        }
         .sheet(isPresented: $showSheet) {
             OlahragaSayaView(olahraga: hvm.olahraganyaUser)
         }

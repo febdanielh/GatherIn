@@ -121,6 +121,7 @@ struct RegistrasiFormView: View {
                                 try await rvm.regWithEmail(email: rvm.emailBaru, password: rvm.passwordBaru, namaLengkap: rvm.namaLengkap, noTelp: rvm.noTelp, tanggalLahir: rvm.tanggalLahir, jenisKelamin: rvm.jenisKelamin, completion: { (result, error) in
                                     isLoading = true
                                     if let result {
+                                        isLoading = false
                                         hvm.getAppUser()
                                         DispatchQueue.main.async {
                                             lvm.currentDisplayScreen = .profiling
@@ -128,6 +129,11 @@ struct RegistrasiFormView: View {
                                         print(result)
                                     } else {
                                         //TODO: jeuuuuu alert error
+                                        isLoading = false
+                                        DispatchQueue.main.async {
+                                            rvm.regisError = .server
+                                            rvm.showAlert = true
+                                        }
                                     }
                                 })
                             }
@@ -145,7 +151,13 @@ struct RegistrasiFormView: View {
                     LoadingView()
                 }
             }
-        }.navigationBarTitleDisplayMode(.large)
+        }
+        .navigationBarTitleDisplayMode(.large)
+        .alert("Terjadi Kesalahan", isPresented: $rvm.showAlert) {
+            ErrorView()
+        } message: {
+            Text(rvm.regisError?.description ?? "error")
+        }
     }
 }
 
