@@ -19,14 +19,14 @@ struct CarouselView: View {
                     Image(imagesNames[imageIndex])
                         .resizable()
                         .scaledToFill()
-                        .frame(height: 200)
-//                        .cornerRadius(16)
+                        .frame(height: 145)
+                        .cornerRadius(10)
                         .clipped()
                         .tag(imageIndex)
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+//            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         }
         .onReceive(timer){_ in
             withAnimation {

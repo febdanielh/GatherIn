@@ -12,6 +12,8 @@ class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var isDisabled = false
+    @Published var loginError: ErrorType? = nil
+    @Published var showAlert = false
     
     func isSignInFormValid(email: String, password: String) -> Bool {
         guard email.isValidEmail(), password.count > 7 else {
@@ -24,6 +26,8 @@ class LoginViewModel: ObservableObject {
         if isSignInFormValid(email: email, password: password) {
             SupabaseManager.instance.login(email: email, password: password, completion: completion)
         } else {
+            loginError = .incomplete
+            showAlert = true
             print("form is invalid")
         }
     }

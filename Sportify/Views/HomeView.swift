@@ -15,14 +15,13 @@ struct HomeView: View {
     @EnvironmentObject var lm: LocationManager
     @State private var searchText = ""
     
+    let images = ["banner 2", "banner 3"]
     @State private var homeVenue: [MKMapItem] = []
     var body: some View {
-        NavigationStack {
+        NavigationStack() {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 30) {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(height: 145).padding(.horizontal).padding(.top)
-                        .foregroundStyle(.gray)
+                    CarouselView(imagesNames: images).frame(height: 160).shadow(radius: 4, x: 0, y: 4).padding([.horizontal, .top])
                     
                     HStack(spacing: 35) {
                         NavigationLink(destination: FunGamesView(), label: {
@@ -84,9 +83,6 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 16) {
-//                                ForEach(DataVenue.venueData, id: \.self) { venue in
-//                                    HomeVenueList(venue: venue)
-//                                }
                                 ForEach(homeVenue, id: \.self) { venue in
                                     NavigationLink(destination: DetailVenue(venue: venue)) {
                                         SimpleHomeVenueList(venue: venue)
@@ -102,26 +98,26 @@ struct HomeView: View {
                 .toolbar(content: {
                     Image(systemName: "bubble.left.and.text.bubble.right").font(.title3).foregroundColor(.white)
                 })
-            }
-        }
-        .tint(.white)
-        .searchable(text: $searchText, prompt: "Cari aktivitas!")
-        .onAppear {
-            UINavigationBarAppearance()
-                .setColor(title: .white, background: .darkerGreen)
-            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
-            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
-            
-            avm.getAllActivities()
-            
-            for olahragaUser in hvm.olahraganyaUser {
-                lm.requestVenuesforHome(input: olahragaUser.namaOlahraga) { result, error in
-                    if let result {
-                        homeVenue.append(contentsOf: result)
+                .onAppear {
+                    UINavigationBarAppearance()
+                        .setColor(title: .white, background: .darkerGreen)
+                    UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
+                    UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
+                    
+                    avm.getAllActivities()
+                    
+                    for olahragaUser in hvm.olahraganyaUser {
+                        lm.requestVenuesforHome(input: olahragaUser.namaOlahraga) { result, error in
+                            if let result {
+                                homeVenue.append(contentsOf: result)
+                            }
+                        }
                     }
                 }
             }
         }
+        .tint(.white)
+        .searchable(text: $searchText, prompt: "Cari aktivitas!")
     }
 }
 

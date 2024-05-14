@@ -118,6 +118,10 @@ class SupabaseManager {
         
     }
     
+    func updateActivityStatus(for id: UUID) {
+        
+    }
+    
     // DELETE
     func logout() {
         

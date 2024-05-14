@@ -15,6 +15,8 @@ class RegistrasiViewModel: ObservableObject {
     @Published var noTelp = ""
     @Published var tanggalLahir = Date()
     @Published var jenisKelamin = ""
+    @Published var regisError: ErrorType? = nil
+    @Published var showAlert = false
     
     func isRegEmailFormValid(email: String, password: String) -> Bool {
         guard email.isValidEmail(), password.count > 7 else {
@@ -35,6 +37,8 @@ class RegistrasiViewModel: ObservableObject {
             try await SupabaseManager.instance.regWithEmail(email: email, password: password, completion: completion)
             try await createUser(namaLengkap: namaLengkap, noTelp: noTelp, tanggalLahir: tanggalLahir, jenisKelamin: jenisKelamin)
         } else {
+            regisError = .incomplete
+            showAlert = true
             print("form is invalid")
             throw NSError()
         }

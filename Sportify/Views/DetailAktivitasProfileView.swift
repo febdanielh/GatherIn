@@ -23,7 +23,7 @@ struct DetailAktivitasProfileView: View {
                         }
                     case 1:
                         ForEach(avm.hostedActivities, id: \.self) { aktivitas in
-                            NavigationLink(destination: DetailAktivitasView(aktivitas: aktivitas)) {
+                            NavigationLink(destination: DetailHostedAktivitasView(aktivitas: aktivitas)) {
                                 AktivitasCard(aktivitas: aktivitas)
                             }.tint(.black)
                         }

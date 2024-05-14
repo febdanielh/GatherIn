@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct ErrorView: View {
-//    @ObservedObject var usersViewModel: UsersViewModel
-
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .foregroundColor(.red)
             .overlay {
 
                 VStack {
-                    Button("Reload Users") {
-                        Task {
-                            
-                        }
+                    Button("Close") {
+                        
                     }
                     .buttonStyle(.borderedProminent)
                 }
