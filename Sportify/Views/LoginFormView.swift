@@ -10,7 +10,9 @@ import SwiftUI
 struct LoginFormView: View {
     @EnvironmentObject var vm: LoginViewModel
     @EnvironmentObject var hvm: HomeViewModel
+    @EnvironmentObject var lm: LocationManager
     @State var isLoading = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -40,17 +42,21 @@ struct LoginFormView: View {
                     
                     Button("Login"){
                         vm.signIn(email: vm.email, password: vm.password, completion: { result, error in
-                        isLoading = true
+                            isLoading = true
                             if let result {
-                                isLoading = false
                                 hvm.getAppUser()
                                 hvm.getOlahragaUser()
+                                isLoading = false
+                                
                                 DispatchQueue.main.async {
+                                    vm.savedEmail = vm.email
+                                    vm.savedPassword = vm.password
+                                    vm.loggedIn = true
                                     vm.currentDisplayScreen = .home
                                 }
+                                
                                 print(result)
                             } else {
-                                //TODO: jeuuuuu alert error
                                 isLoading = false
                                 DispatchQueue.main.async {
                                     vm.loginError = .server
@@ -78,4 +84,5 @@ struct LoginFormView: View {
     LoginFormView()
         .environmentObject(LoginViewModel())
         .environmentObject(HomeViewModel())
+        .environmentObject(LocationManager())
 }

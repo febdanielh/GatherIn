@@ -22,7 +22,7 @@ struct ProfileView: View {
                         .padding()
                         .foregroundStyle(.gray)
                     
-                    Text(hvm.namaUser).font(.title2).fontWeight(.medium)
+                    Text(hvm.savedName).font(.title2).fontWeight(.medium)
                     
                     VStack(alignment: .leading, spacing: 16) {
                         HStack {
@@ -66,7 +66,10 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
             .toolbar(content: {
-                Image(systemName: "square.and.pencil").foregroundColor(.white).fontWeight(.medium)
+                NavigationLink(destination: SettingView()) {
+                    Image(systemName: "gearshape")
+                            .font(.title3).foregroundColor(.white).fontWeight(.medium)
+                }
             })
             .onAppear {
                 UINavigationBarAppearance()

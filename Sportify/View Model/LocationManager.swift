@@ -12,6 +12,7 @@ import CoreLocation
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     @Published var userLocation: CLLocation?
+    @Published var homeVenue: [MKMapItem] = []
     
     override init() {
         super.init()
@@ -144,37 +145,49 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
-    func requestVenuesforHome(input: String, completion: @escaping ([MKMapItem]?, Error?) -> Void) {
+    func requestVenuesforHome(input: [OlahragaPayload], completion: @escaping ([MKMapItem]?, Error?) -> Void) {
         var requestedPlaces: [MKMapItem] = []
-        
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = input
-        request.resultTypes = .pointOfInterest
-        
         let center = self.userLocation
-        request.region = MKCoordinateRegion(center: center?.coordinate ?? CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
-        let search = MKLocalSearch(request: request)
-        search.start { (response, error)  in
-            guard let response = response else {
-                completion(nil, error)
-                return
+        for olahraga in input {
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = olahraga.namaOlahraga
+            request.resultTypes = .pointOfInterest
+            
+            request.region = MKCoordinateRegion(center: center?.coordinate ?? CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            
+            let search = MKLocalSearch(request: request)
+            search.start { (response, error)  in
+                guard let response = response else {
+                    completion(nil, error)
+                    return
+                }
+                
+                let mapItems = response.mapItems
+                let sortedMapItems = mapItems.sorted {
+                    let location1 = $0.placemark.location
+                    let location2 = $1.placemark.location
+                    let distance1 = center?.distance(from: location1!)
+                    let distance2 = center?.distance(from: location2!)
+                    return distance1 ?? 0 < distance2 ?? 0
+                }
+                
+                let nearestMapItems = Array(sortedMapItems.prefix(2))
+                print(nearestMapItems)
+                
+                requestedPlaces.append(contentsOf: nearestMapItems)
+                completion(requestedPlaces, nil)
             }
-            
-            let mapItems = response.mapItems
-            let sortedMapItems = mapItems.sorted {
-                let location1 = $0.placemark.location
-                let location2 = $1.placemark.location
-                let distance1 = center?.distance(from: location1!)
-                let distance2 = center?.distance(from: location2!)
-                return distance1 ?? 0 < distance2 ?? 0
-            }
-            
-            let nearestMapItems = Array(sortedMapItems.prefix(2))
-            print(nearestMapItems)
-            
-            requestedPlaces = nearestMapItems
-            completion(requestedPlaces, nil)
         }
+        
+        DispatchQueue.main.async {
+            self.homeVenue = requestedPlaces
+        }
+    }
+    
+    func clearLocationSaves() {
+        homeVenue = []
+        
+        print(homeVenue)
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct DetailKomunitasView: View {
     @EnvironmentObject var cvm: CommunityViewModel
     @State private var selectedTitleIndex: Int = 0
+    @State private var showAlert = false
+    
     let komunitas: KomunitasPayLoad
     let titles = ["Detail", "Anggota", "Aktivitas"]
     var body: some View {
@@ -59,7 +61,14 @@ struct DetailKomunitasView: View {
             }
             .safeAreaInset(edge: .bottom) {
                 Button("Bergabung") {
-                    
+                    Task {
+                        try await cvm.joinKomunitas(id: komunitas.komunitasID) { result, error in
+                            if let result {
+                                showAlert = true
+                                print(result)
+                            }
+                        }
+                    }
                 }.buttonStyle(GreenRealButton()).shadow(radius: 4).padding(.bottom)
             }
         }
@@ -69,6 +78,11 @@ struct DetailKomunitasView: View {
                 .setColor(background: .darkerGreen)
             
 //            cvm.getAktivitasKomunitas(id: komunitas.komunitasID)
+        }
+        .alert("Berhasil", isPresented: $showAlert) {
+            SuccessView()
+        } message: {
+            Text("Berhasil bergabung ke komunitas!")
         }
     }
 }
@@ -101,7 +115,7 @@ struct AnggotaKomunitas: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 12).foregroundStyle(.white).shadow(radius: 4)
                     HStack(spacing: 25) {
-                        Circle().frame(width: 55, height: 55).foregroundStyle(.gray)
+                        Image(systemName: "person.circle.fill").resizable().frame(width: 55, height: 55).foregroundStyle(.gray)
                         VStack(alignment: .leading, spacing: 10) {
                             Text(user.namaLengkap).fontWeight(.medium)
                             Text((komunitas.ownerID == user.userID) ? "Admin" : "Anggota").font(.callout)

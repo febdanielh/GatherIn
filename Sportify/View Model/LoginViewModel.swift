@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var currentDisplayScreen: DisplayScreen = .login
@@ -14,6 +15,10 @@ class LoginViewModel: ObservableObject {
     @Published var isDisabled = false
     @Published var loginError: ErrorType? = nil
     @Published var showAlert = false
+    
+    @AppStorage("loggedIn") var loggedIn = false
+    @AppStorage("savedEmail") var savedEmail: String = ""
+    @AppStorage("savedPassword") var savedPassword: String = ""
     
     func isSignInFormValid(email: String, password: String) -> Bool {
         guard email.isValidEmail(), password.count > 7 else {
@@ -30,5 +35,15 @@ class LoginViewModel: ObservableObject {
             showAlert = true
             print("form is invalid")
         }
+    }
+    
+    func clearLogsinSaves() {
+        savedEmail = ""
+        savedPassword = ""
+        loggedIn = false
+        
+        print(savedEmail)
+        print(savedPassword)
+        print(loggedIn)
     }
 }
