@@ -26,6 +26,7 @@
 		E146E16A2BF11FE200812643 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1692BF11FE200812643 /* SuccessView.swift */; };
 		E146E16D2BF210BD00812643 /* SupaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E16C2BF210BD00812643 /* SupaExt.swift */; };
 		E146E1702BF213A500812643 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = E146E16F2BF213A500812643 /* ci_pre_xcodebuild.sh */; };
+		E146E1722BF4722B00812643 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E146E1712BF4722B00812643 /* SettingView.swift */; };
 		E14A32AB2BDBA4690079C361 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AA2BDBA4690079C361 /* MapView.swift */; };
 		E14A32AF2BE004640079C361 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14A32AE2BE004640079C361 /* NotificationManager.swift */; };
 		E19ECFC32BA09CB0004B7E46 /* SportifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ECFC22BA09CB0004B7E46 /* SportifyApp.swift */; };
@@ -110,6 +111,7 @@
 		E146E1692BF11FE200812643 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		E146E16C2BF210BD00812643 /* SupaExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupaExt.swift; sourceTree = "<group>"; };
 		E146E16F2BF213A500812643 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		E146E1712BF4722B00812643 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E14A32AA2BDBA4690079C361 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E14A32AE2BE004640079C361 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E19ECFBF2BA09CB0004B7E46 /* Sportify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +307,7 @@
 				E146E1622BE4D0B700812643 /* EditDetailAktivitasView.swift */,
 				E146E1672BF11E6E00812643 /* ErrorView.swift */,
 				E146E1692BF11FE200812643 /* SuccessView.swift */,
+				E146E1712BF4722B00812643 /* SettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				E19ED01A2BA9AECD004B7E46 /* KomunitasProfile.swift in Sources */,
 				E1C8E68A2BC8DBF100A8F1D1 /* BiayaView.swift in Sources */,
 				E19ECFFB2BA82FB7004B7E46 /* LoginView.swift in Sources */,
+				E146E1722BF4722B00812643 /* SettingView.swift in Sources */,
 				E19ED0062BA94AC9004B7E46 /* RegistrasiViewModel.swift in Sources */,
 				E19ED0082BA94B5D004B7E46 /* LocationManager.swift in Sources */,
 				E19ECFD12BA09DEA004B7E46 /* SupabaseManager.swift in Sources */,

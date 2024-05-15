@@ -28,7 +28,7 @@ struct ProfilingView: View {
                     SetSkillLevelView(olahragaPilihan: $olahragaPilihan).tag(2)
                     
                     VStack(alignment: .leading, spacing: 20) {
-                        Text("Welcome, \(hvm.namaUser)!").font(.title).bold()
+                        Text("Welcome, \(hvm.savedName)!").font(.title).bold()
                         Text("Let's Get Started!").fontWeight(.medium).font(.title3)
                     }.tag(3)
                 }

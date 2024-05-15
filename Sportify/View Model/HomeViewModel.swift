@@ -8,15 +8,20 @@
 import Foundation
 import Supabase
 import MapKit
+import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    @Published var namaUser = ""
+//    @Published var namaUser = ""
     @Published var appUser: AppUser?
     @Published var olahragaUser: [OlahragaMaster] = []
     @Published var skillLevels: [String : String] = [:]
     @Published var olahraganyaUser: [OlahragaPayload] = []
     @Published var path = [Int]()
     @Published var homeError: ErrorType? = nil
+    
+    @AppStorage("savedName") var savedName: String = ""
+    @AppStorage("savedPhone") var savedPhone: String = ""
+    @AppStorage("savedGender") var savedGender: String = ""
     
     func getAppUser() {
         Task {
@@ -25,12 +30,14 @@ class HomeViewModel: ObservableObject {
                 let user : UserPayLoad? = try await SupabaseManager.instance.client.database.from("User").select().eq("userID", value: userID).single().execute().value
                 
                 DispatchQueue.main.async {
-                    self.namaUser = user?.namaLengkap ?? ""
+                    self.savedName = user?.namaLengkap ?? ""
+                    self.savedPhone = user?.noTelp ?? ""
+                    self.savedGender = user?.jenisKelamin ?? ""
                 }
+                
                 print(user ?? UserPayLoad(userID: UUID(), email: "", namaLengkap: "", noTelp: "", tanggalLahir: Date(), jenisKelamin: ""))
                 
             } catch {
-                homeError = ErrorType.server
                 print(error)
             }
         }
@@ -39,7 +46,7 @@ class HomeViewModel: ObservableObject {
     func getUserFirstName() -> String {
         var username = ""
         
-        var components = namaUser.components(separatedBy: " ")
+        var components = savedName.components(separatedBy: " ")
         if components.count > 0 {
             let firstName = components.removeFirst()
             username = firstName
@@ -94,5 +101,15 @@ class HomeViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+    
+    func clearHomeSaves() {
+        savedName = ""
+        savedPhone = ""
+        savedGender = ""
+        
+        print(savedName)
+        print(savedPhone)
+        print(savedGender)
     }
 }

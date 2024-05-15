@@ -53,7 +53,7 @@ class SupabaseManager {
         }
     }
     
-    func newDetailCommunity(item: DetailKomunitasPayload, completion: @escaping (String?, Error?) -> Void) async throws{
+    func newDetailCommunity(item: DetailKomunitasPayload, completion: @escaping (String?, Error?) -> Void) async throws {
         do {
             try await client.database.from("DetailKomunitas").insert(item).execute()
             completion("Success", nil)
@@ -81,7 +81,6 @@ class SupabaseManager {
             print("fail \(error.localizedDescription)")
             completion(nil, error)
         }
-           
     }
     
     // READ
@@ -124,6 +123,12 @@ class SupabaseManager {
     
     // DELETE
     func logout() {
-        
+        Task {
+            do {
+                try await client.auth.signOut()
+            } catch {
+                print("error session")
+            }
+        }
     }
 }

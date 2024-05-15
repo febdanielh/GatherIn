@@ -14,9 +14,10 @@ struct HomeView: View {
     @EnvironmentObject var avm: ActivityViewModel
     @EnvironmentObject var lm: LocationManager
     @State private var searchText = ""
+    @State private var searchHomeVenue: [MKMapItem] = []
     
     let images = ["banner 2", "banner 3"]
-    @State private var homeVenue: [MKMapItem] = []
+    
     var body: some View {
         NavigationStack() {
             ScrollView(.vertical, showsIndicators: false) {
@@ -83,7 +84,7 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 16) {
-                                ForEach(homeVenue, id: \.self) { venue in
+                                ForEach(searchHomeVenue, id: \.self) { venue in
                                     NavigationLink(destination: DetailVenue(venue: venue)) {
                                         SimpleHomeVenueList(venue: venue)
                                     }.tint(.black)
@@ -106,11 +107,13 @@ struct HomeView: View {
                     
                     avm.getAllActivities()
                     
-                    for olahragaUser in hvm.olahraganyaUser {
-                        lm.requestVenuesforHome(input: olahragaUser.namaOlahraga) { result, error in
-                            if let result {
-                                homeVenue.append(contentsOf: result)
-                            }
+                    if hvm.olahraganyaUser.isEmpty {
+                        hvm.getOlahragaUser()
+                    }
+                    
+                    lm.requestVenuesforHome(input: hvm.olahraganyaUser) { result, error in
+                        if let result {
+                            self.searchHomeVenue = result
                         }
                     }
                 }

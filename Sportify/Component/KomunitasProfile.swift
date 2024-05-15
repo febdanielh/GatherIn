@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct KomunitasProfile: View {
+    @EnvironmentObject var cvm: CommunityViewModel
+    @EnvironmentObject var lm: LocationManager
     let komunitas: KomunitasPayLoad
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .foregroundStyle(.white)
-                .frame(height: 120)
                 .shadow(radius: 4)
             VStack {
                 HStack(spacing: 20) {
-                    Rectangle().frame(width: 75, height: 75)
-                        .foregroundColor(.gray)
+                    if komunitas.fotoKomunitas == "" {
+                        Image("dummyVenue3")
+                            .resizable().scaledToFill()
+                            .frame(width: 70, height: 70)
+                            .clipped()
+                    } else {
+                        Image(komunitas.fotoKomunitas ?? "dummyVenue3")
+                            .resizable().scaledToFill()
+                            .frame(width: 70, height: 70)
+                            .clipped()
+                    }
                     
                     VStack(alignment: .leading, spacing: 10) {
                         Text(komunitas.namaKomunitas).font(.body).fontWeight(.bold)
@@ -28,21 +38,33 @@ struct KomunitasProfile: View {
                                 .foregroundStyle(getLabelColor(for: komunitas.olahragaKomunitas))
                             Text(komunitas.olahragaKomunitas).font(.caption)
                         }
-                        Text("10 Anggota · Tangerang Selatan").font(.footnote).fontWeight(.medium)
+                        Text("\(cvm.userInCommunity.count) Anggota · \(cvm.lokasiCommunity)").font(.footnote).fontWeight(.medium)
                     }
                     
                     Spacer()
-                }.padding(.horizontal)
+                }.padding()
             }
         }
-        .frame(height: 120).padding(.horizontal)
+        .frame(height: 100).padding(.horizontal)
+        .onAppear(perform: {
+            cvm.getUserInKomunias(id: komunitas.komunitasID)
+            lm.searchLocationCoordinate(input: komunitas.lokasiKomunitas) { result, error in
+                if let result {
+                    DispatchQueue.main.async {
+                        cvm.lokasiCommunity = result.placemark.locality ?? "disini"
+                    }
+                } else {
+                    print(error ?? "error bang")
+                }
+            }
+        })
     }
 }
 
 #Preview {
-//    KomunitasProfile(olahragaKomunitas: "Badminton")
-//    NoKomunitasProfile()
-    NoAktivitasProfile(showSheet: .constant(false))
+    KomunitasProfile(komunitas: KomunitasPayLoad(created_at: .now, namaKomunitas: "", deskripsiKomunitas: "", olahragaKomunitas: "", lokasiKomunitas: "", ownerID: UUID())).environmentObject(CommunityViewModel()).environmentObject(LocationManager())
+    //    NoKomunitasProfile()
+//    NoAktivitasProfile(showSheet: .constant(false))
 }
 
 struct NoKomunitasProfile: View {
